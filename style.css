@@ -1,0 +1,260 @@
+/* for full document */
+
+    *{
+        box-sizing: border-box;
+    }
+
+    
+    #logo{
+        float: left;
+        justify-content:flex-start;
+        padding: none;
+        margin-left: 10px;
+    }
+
+    .navbar a:hover{
+        color:aqua;
+    }
+
+    .navbar {
+        background-color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+    }
+
+    .menu-left {
+        flex: 1;
+        position: ancestor;
+
+    }
+
+    .menu-right{
+        flex: 1;
+        text-align: right;
+        font-size: small;
+        position: ancestor;
+        right: 0px;
+        margin-right: 20px;
+    }
+
+    .menu-item {
+        text-decoration: none;
+        color: #333;
+        margin-left: 20px;
+    }
+    .menu-item:first-child {
+        margin-left: 0;
+    }
+
+    body{
+        font-family: Raleway, Inter, Montserrat, Arial, Helvetica, sans-serif;
+        margin:0;
+        padding: 0;
+    }
+
+    footer{
+        display:block;
+        clear: both;
+        background-color: rgb(161, 192, 192);
+        text-align: center;
+        padding: 25px;
+    }
+
+    footer a:link{
+        color:black;
+        font-style: normal;
+    }
+
+    @media screen and (max-width:600px){
+        aside, section, article{
+            width: 100%;
+        }
+    }
+
+    aside{
+        width: 20%;
+        float: left;
+        padding: 10px;
+    }
+
+    section{
+        /* width: 80%; */
+        /* float: left; */
+        padding: 10px;
+        font-family: Raleway;
+        font-style: normal;
+    }
+
+    article{
+            width: 40%;
+            float: left;
+            padding: 10px;
+    }
+
+
+/* HOME page */
+
+    .image-container-full {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-gap: 20px;
+        padding: 20px; */
+    }
+    .image-full {
+        position: relative;
+        overflow: hidden;
+        /* border-radius: 5px; */
+    }
+    .image-full img {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* border-radius: 5px; */
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .image-full:hover .overlay {
+        opacity: 1;
+    }
+
+
+/* Projects PAGE */
+
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-gap: 20px;
+        padding: 20px; */
+    }
+    .image {
+        position: relative;
+        overflow: hidden;
+        /* border-radius: 5px; */
+    }
+    .image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        /* border-radius: 5px; */
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .image:hover .overlay {
+        opacity: 1;
+    }
+    .overlay h2, .overlay p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .projects-menu {
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .projects-menu a{
+        text-decoration: none;
+        color: #333;
+        margin-left: 20px;
+        font-size: 15px;;
+    }
+
+    .projects-menu a:hover{
+        color:aqua;
+    }
+
+    .projects-class{
+        text-align: center;
+        font-family: Montserrat, Inter;
+    }
+
+
+
+/* ABOUT PAGE */
+
+    .about-strengths{
+        font-family: Inter, Montserrat, Raleway;
+    }
+
+    section h1{
+    font-size: 30px;
+    }
+
+    section h3{
+        text-align: left;
+    }
+
+      
+    .about-main{
+        margin: 50px;
+
+    }
+
+    #about-intro{
+        width: 67%;
+    }
+
+    .about-main h1{
+        text-align: center;
+    }                
+
+    .strengths ul{
+        text-align: left;
+        justify-content: center;
+        float: left;
+        flex: 1;
+        overflow: hidden;
+        padding: none;
+
+    }
+
+    #img2{
+        float: right;
+        margin-left: 10px;
+    }
+
+
+    .aboutStrengths{
+        justify-content: center;
+        border: 2px solid;
+        height: 200px;
+        width: 30%;
+        float: left;
+        max-width: 400px;;
+        min-width: 150px;
+    }
+
