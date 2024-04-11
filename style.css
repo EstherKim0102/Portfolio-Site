@@ -59,16 +59,26 @@
     footer{
         display:block;
         clear: both;
-        background-color: rgb(161, 192, 192);
+        background-color: rgb(255, 255, 255);
         text-align: center;
         padding: 25px;
+        font-family: Inter, Montserrat;
+        font-style: normal;
+    }
+    footer h2{
+        font-size: 25px;
+        font-weight: 400;
     }
 
-    footer a:link{
+    footer a{
+        text-decoration: none;
+        margin: 10px;
         color:black;
         font-style: normal;
     }
-
+    footer i{
+        color: #868686;
+    }
     @media screen and (max-width:600px){
         aside, section, article{
             width: 100%;
@@ -132,6 +142,19 @@
     }
     .image-full:hover .overlay {
         opacity: 1;
+    }
+
+    .home-main{
+        background-color: #333;
+    }
+
+    .home-main h1{
+        text-align: center;
+    }
+
+    #mainBanner{
+        width: auto;
+        height: 80%;
     }
 
 
@@ -220,8 +243,16 @@
 
       
     .about-main{
-        margin: 50px;
+        margin: 10%;
+    }
 
+    .about-main button{
+        float: right;
+        border-radius: 20px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-width: 1px;
     }
 
     #about-intro{
@@ -258,3 +289,57 @@
         min-width: 150px;
     }
 
+
+/* CONTACTS PAGE */
+
+    .contacts-main{
+        padding: 10%;
+        font-family: Inter, Montserrat, Raleway;
+    }
+
+    .contacts-main h2{
+        text-align: left;
+        font-size: 50px;
+        font-weight: 350;
+    }
+
+    .contacts-main h3{
+        text-align: left;
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+
+    .contacts-section {
+        padding: 20px;
+        border: 2px solid;
+        border-radius: 15px;
+        width: 400px;
+        background-color:  hsl(276, 100%, 93%);
+        border: none;
+
+        position: relative;
+        top: -100px;
+        left: 300px;
+    }
+
+    .contacts-section label{
+        padding: 10px;
+        font-size: small;
+        justify-content: center;
+        font-family: Inter;
+        color: #333;
+        text-align: left;
+    }
+    .contacts-section input{
+        padding: 10px;
+        border: none;
+        border-style: none;
+        display:inline-block;
+    }
+    .contacts-section div{
+        border: 2px solid;
+        border-color:  hsl(276, 100%, 93%);
+        background-color: white;
+        border-width: 1px;
+    }

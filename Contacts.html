@@ -34,26 +34,74 @@
     <br><br><br><br>
 
 
-    <main>
+    <main class="contacts-main">
         <h2>Let's Connect!</h2>
-        <h3>This is the Contacts page</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vero sapiente quod iure, aut repudiandae. Atque perferendis doloribus voluptate pariatur nobis quaerat ipsam, rerum, recusandae placeat quisquam harum nisi in!
+        <h3><br>Esther Kim</h3>
+        <p>3D Motion & Interactive Designer<br> 
+            estherkim000102@gmail.com
         </p>
-    </main>
 
+        <section class="contacts-section">
+            <form action="index.php" method="POST" enctype="multipart/form-data">
+                <div id="box1">
+                    <label for="username">Name*</label>
+                    <input type="text" id="username"  required><br>
+                </div>
+                <div>
+                    <label for="emali">Email*</label>
+                    <input type="email" id="email"  required><br>
+                </div>
+                <div>
+                    <label for="Phone">Phone</label>
+                    <input type="tel" id="Phone"><br>                
+                </div>
+                <div>
+                    <label for="comment">Message*</label>
+                    <textarea type="text" id="comment" rows="3" cols="25"   placeholder="Send me a note or a good luck wish!"  required></textarea>                    
+                </div>
+
+                    <br>
+
+                <input type="submit">
+                
+            </form>
+        </section>
+    </main>
 </body>
 
 
 
 <footer>
-    <h3 id="footer">YUNANDYUNA</h3>
+    <br><br><br><br>
+    <h2 id="footer-name">YUNANDYUNA</h2>
+    <br>
     <small>
-        <a id="emailaddress" href="mailto:estherkim000102@gmail.com">estherkim000102@gmail.com    |</a>
-        <a id="phone">8045287467    |</a>
-        <a id="instagram">@esther_kim    |</a>
-        <a id="linkedin">estherkim0102</a>
-        <hr>
-        &copy; copyright reserved | 2024 Yuna Kim<br>
+        <p>
+            <a id="emailaddress" href="mailto:estherkim000102@gmail.com">
+                <!-- <i class="fa-solid fa-envelope"></i> -->
+                estherkim000102@gmail.com</a>
+                |
+            <a id="phone">        
+                <!-- <i class="fa-solid fa-phone"></i> -->
+                045287467</a>
+                |
+            <!-- <a id="instagram">        
+                <i class="fa-brands fa-instagram"></i>
+                esther_kim</a>
+                | -->
+            <a id="linkedin" href="https://www.linkedin.com/in/estherkim0102/">        
+                <i class="fa-brands fa-linkedin"></i>
+                estherkim0102</a>
+                |
+            <a id="behance" href="https://www.behance.net/estherkimportfolio">        
+                <i class="fa-brands fa-behance"></i>
+                estherkimportfolio</a>
+        </p>
+
+
+        <!-- <hr> -->
+        &copy; 2024 by Yuna Kim.<br><br><br>
+
     </small>
 </footer>
 
