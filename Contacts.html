@@ -45,7 +45,7 @@
         </div>
     </main>
 
-        <section class="contacts-section" id="contactsform">
+        <section class="contacts-section" id="contactsfield">
             <form action="index.php" method="POST" enctype="multipart/form-data">
                 <div id="formbox">
                     <label for="username">Name*</label>
@@ -60,17 +60,16 @@
                     <input type="tel" id="Phone"><br>                
                 </div>
                 <div>
-                    <label for="comment">Message*</label>
+                    <label for="comment"></label><br>
                     <textarea type="text" id="comment" rows="3" cols="25"   placeholder="Send me a note or a good luck wish!"  required></textarea>                    
                 </div>
 
-                    <br>
-
-                <input type="submit">
-                
             </form>
-        </section>
-</body>
+            <input type="submit" id="submit">
+        </section>   
+        <img id="about-image" src="assets/logo16.png" width="100%">
+ 
+    </body>
 
 
 

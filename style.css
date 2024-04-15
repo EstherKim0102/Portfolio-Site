@@ -111,19 +111,16 @@ article{
 .image-container-full {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    /* grid-gap: 20px;
-    padding: 20px; */
 }
 .image-full {
     position: relative;
     overflow: hidden;
-    /* border-radius: 5px; */
 }
+
 .image-full img {
     width: 100%;
     height: auto;
     display: block;
-    /* border-radius: 5px; */
 }
 .overlay {
     position: absolute;
@@ -133,6 +130,8 @@ article{
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    font-family: Raleway, Montserrat;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +144,7 @@ article{
 }
 
 .home-main{
-    background-color: #b7b7b7;
+    background-color: white;
 }
 
 .home-main h1{
@@ -163,9 +162,8 @@ article{
 .image-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-gap: 20px;
-    padding: 20px; */
 }
+
 .image {
     position: relative;
     overflow: hidden;
@@ -275,6 +273,10 @@ section h1:hover{
     color:rgb(0, 0, 0);
     font-weight: bolder;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transform: translateY(-10px);
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
 }
 
 section h3{
@@ -286,6 +288,10 @@ section h3:hover{
     color:rgb(0, 0, 0);
     font-weight: bolder;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);      
+    transition: transform 0.3s ease;
+    transform: translateY(-10px);
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
 }
 
 .aboutStrengths{
@@ -362,27 +368,53 @@ section h3:hover{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+    transition: transform 0.3s ease;
 }
 
 #logo2{
     min-width: 200px;
+    transition: all 0.3s;
+
 }
 
 #logo2:hover{
     justify-content: center;
     align-items: center;
+    transform: translateY(-10px);
+    background-color: var(rgb(45, 88, 74));
+    color: var(aquamarine);
 }
 
+@keyframes slideInLeft  {
+    form{
+        transform: translateX(-300px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+#clover1{
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-duration: normal;
+    animation-fill-mode: none;
+    /* animation: slideInLeft 1s ease-in 1s 1 normal both; */
+    transform: translateX(-150px);
+    animation: slideInLeft 1s ease-in both;
+}
 
 /* CONTACTS PAGE */
 
 .contacts-main{
     padding: 10%;
     font-family: Inter, Montserrat, Raleway;
-    flex-direction: column;
+    /* flex-direction: column; */
     display: flex;
-    flex-direction: row;
     float:left;
 }
 
@@ -397,43 +429,49 @@ section h3:hover{
     font-size: 26px;
     font-weight: 500;
 }
+
 #myinfo{
-    border: 2px solid;
+    /* border: 2px solid; */
     width: 400px;
     float: left;
     box-sizing: border-box;
 }
 
-.contacts-section {
+#contactsfield{
+    float: left;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.contacts-section form{
     /* box-sizing: border-box; */
     margin-right: 10%;
     padding: 20px;
-    border: 2px solid;
+    /* border: 2px solid; */
     border-radius: 15px;
-    width: 400px;
-    background-color:  hsl(276, 100%, 93%);
-    border: 2px solid;
+    /* width: 400px; */
+    background-color:  hsl(267, 100%, 93%);
     float: right;
-}
-
-#contactsform{
-    
 }
 
 .contacts-section label{
     padding: 10px;
+    padding-left: 20px;
     font-size: small;
     justify-content: center;
     font-family: Inter;
-    color: #333;
+    color: #7c7c7c;
     text-align: left;
     align-content: center;
+    align-items: center;
 }
 .contacts-section input{
-    padding: 10px;
+    padding: 15px;
     border: none;
     border-style: none;
     align-items: right;
+    width: 320px;
+    outline: none;
 }
 .contacts-section div{
     border: 2px solid;
@@ -443,4 +481,123 @@ section h3:hover{
 }
 #comment{
     border: none;
+    align-items: left;
+    width: 438px;
+    justify-content: left;
+    margin-left: 20px;
+    outline: none;
+    font-family: Inter, Montserrat, Raleway;
+
 }
+
+#submit{
+    width:auto;
+    border: none;
+    background-color: none;
+    margin-top: 20px;
+}
+
+
+
+
+/* MOUSE INTERACTION */
+
+    .cursor{
+        z-index: 999;
+        position: fixed;
+        background: greenyellow;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: 0 0 20px greenyellow, 0 0 60px greenyellow, 0 0 100px greenyellow;
+        color: aquamarine;
+        animation: colors 5s infinite;
+        transform: translate(-50%, -50%);
+        display: none;
+
+    }
+
+    @keyframes colors{
+        0%{
+            filter: hue-rotate(0deg);
+        }
+        100%{
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    .cursor:before{
+        content: '';
+        position: absolute;
+        background: greenyellow;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        opacity: 0.2;
+        transform: translate(-30%, -30%);
+    }
+/* 
+    .circle {
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: all 0.3 ease;
+        /* display: none; */
+    /* } */ 
+
+    /* .link-grow{
+        transform: scale(3);
+        background-color: blue;
+    }
+
+    .navbar2{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        min-height: 10vh;
+        align-items: center;
+        margin: auto;
+    }
+
+    .nav-links, h4 {
+        display: flex;
+        flex: 0.2;
+        justify-content: space-between;
+        list-style: none;
+        position: inherit;
+    } */
+
+    /* body {
+        margin: 0;
+        overflow: hidden;
+      } */
+      
+      .clover {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-image: url('/assets/clover.png');
+        background-size: cover;
+        pointer-events: none;
+        opacity: 1;
+        animation: clover-float 2s forwards;
+      }
+      
+      @keyframes clover-float {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(100px, -100px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+      
