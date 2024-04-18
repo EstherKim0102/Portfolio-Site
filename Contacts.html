@@ -21,6 +21,16 @@
 
 <body>
 
+    <div class="clover"></div>
+    <!-- <div class="cursor"></div> -->
+
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
     <nav class="navbar">
             <div class="menu-left">
                 <img id="logo" src="assets/icon.png" width="20px">
@@ -44,28 +54,54 @@
             </p>
         </div>
     </main>
+    
 
         <section class="contacts-section" id="contactsfield">
-            <form action="index.php" method="POST" enctype="multipart/form-data">
+            <form id="emailForm" action="https://formspree.io/f/mqkrwzlp" method="POST" enctype="multipart/form-data">
                 <div id="formbox">
-                    <label for="username">Name*</label>
-                    <input type="text" id="username"  required><br>
+                    <label for="username" >Name*</label>
+                    <input type="text" id="username" name="username" required><br>
                 </div>
                 <div>
                     <label for="emali">Email*</label>
-                    <input type="email" id="email"  required><br>
+                    <input type="email" id="email" name="email" required><br>
                 </div>
                 <div>
                     <label for="Phone">Phone</label>
-                    <input type="tel" id="Phone"><br>                
+                    <input type="tel" id="Phone" name="phone"><br>                
                 </div>
                 <div>
                     <label for="comment"></label><br>
-                    <textarea type="text" id="comment" rows="3" cols="25"   placeholder="Send me a note or a good luck wish!"  required></textarea>                    
+                    <textarea type="text" id="comment" name="comment" rows="3" cols="25"   placeholder="Send me a note or a good luck wish!"  required></textarea>                    
                 </div>
+                <button type="submit" id="submit">Send</button>
 
             </form>
-            <input type="submit" id="submit">
+
+
+    <script>
+        const form = document.getElementById('emailForm');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            const response = await fetch('https://formspree.io/f/mqkrwzlp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            alert(`Your message has been sent!`);
+        });
+    </script>
+
+
         </section>   
         <img id="about-image" src="assets/logo16.png" width="100%">
  
@@ -106,5 +142,7 @@
 
     </small>
 </footer>
+
+<script src="script.js"></script>
 
 </html>

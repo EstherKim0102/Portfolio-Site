@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 #logo{
     float: left;
     justify-content:flex-start;
@@ -13,23 +12,24 @@
 }
 
 .navbar a:hover{
-    color:aqua;
+    color:rgb(0, 255, 217);
 }
 
 .navbar {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
+    z-index: 4;
 }
 
 .menu-left {
     flex: 1;
     position: ancestor;
-
+    z-index: 40;
 }
 
 .menu-right{
@@ -48,6 +48,10 @@
 }
 .menu-item:first-child {
     margin-left: 0;
+}
+
+.home-main h1, P{
+    font-family: Raleway, Inter;
 }
 
 body{
@@ -85,15 +89,13 @@ footer i{
     }
 }
 
-aside{
+/* aside{
     width: 20%;
     float: left;
     padding: 10%;
 }
 
 section{
-    /* width: 80%; */
-    /* float: left; */
     padding: 10px;
     font-family: Raleway;
     font-style: normal;
@@ -103,10 +105,16 @@ article{
         width: 40%;
         float: left;
         padding: 10px;
-}
+} */
 
 
 /* HOME page */
+
+.home-main h1{
+    font-family: Raleway, Inter;
+    font-size: 40px;
+    font-weight: normal;
+}
 
 .image-container-full {
     display: grid;
@@ -162,6 +170,16 @@ article{
 .image-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.projects-class h1{
+    font-family: Raleway, Inter;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.projects-class p, a{
+    font-family: Inter, Montserrat;
 }
 
 .image {
@@ -229,6 +247,7 @@ article{
 
 .about-main{
     font-family: Inter, Montserrat, Raleway;
+    font-size: 120%;
 }
   
 .about-main header{
@@ -262,13 +281,14 @@ article{
     float: none;
 }                
 
-section h1{
+.about-main h1{
+    text-align: center;
     font-family: Raleway, Inter;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: normal;
 }
 
-section h1:hover{
+.about-main h1:hover{
     font-style: bold;
     color:rgb(0, 0, 0);
     font-weight: bolder;
@@ -279,11 +299,11 @@ section h1:hover{
     color: var(--clr-light);
 }
 
-section h3{
+/* .about-main h3{
     text-align: left;
-}
+} */
 
-section h3:hover{
+.about-main h3:hover{
     font-style: bold;
     color:rgb(0, 0, 0);
     font-weight: bolder;
@@ -294,96 +314,140 @@ section h3:hover{
     color: var(--clr-light);
 }
 
-.aboutStrengths{
-    justify-content: center; 
-    float: inline-end;
-    /* border: 2px solid; */
-    height: 200px;
-    width: 30%;
-    /* max-width: 400px; */
-    /* min-width: 150px; */
-    padding-bottom: 10%;
-}
-
-.class-strengths h1{
-    text-align: center;
-}
-.aboutStrengths li{
-    margin-left: 20px;
-}
-
 #about-image{
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.class-background h1{
-    text-align: left;
-}
-.class-Experience h1{
-    text-align: left;
+.class-strengths {
+    width: 100%;
+    height: 100vh;
+    background-image: url("assets/strengthimage.png");
+    background-position:bottom;
+    background-size: cover;
 }
 
-#box-1{
-    /* border: 2px solid; */
-    width: 60%;
-    height: auto;
-    float: right;
-    padding-right: 10%;
-    padding-bottom: 20%;
-    box-sizing: border-box;
-    text-align: right;
-    padding-left: 0;
-    max-width: 1000px;
-    align-content: center;
+/* #Strengths{
+    text-align: center;
+    font-family: Raleway, Inter;
+    font-size: 40px;
+    font-weight: normal;
+} */
 
-}
-#box-2{
-    /* border: 2px solid; */
-    width: 40%;
+.strength img {
     height: auto;
-    max-height: 200px;
-    float: left;
-    padding: 0%;
+    display: block;
 }
-#box-3{
-    /* border: 2px solid; */
-    width: 60%;
-    height: auto;
-    float: left;
-    padding-left: 10%;
-    padding-bottom: 10%;
-    box-sizing: border-box;
-    align-content: center;
-}
-#box-4{
-    /* border: 2px solid; */
-    width: 40%;
-    height: auto;
-    float: right;
-    padding-left: 5%;
-    padding-right: 10%;
-    padding-top: 5%;
-    max-height: 200px;
-    justify-content: center;
+
+.strength{
+    display: flex;
+    flex: 1;
+    justify-content:center;
     align-items: center;
+}
+
+.strength1 {
+    justify-content:center;
+    align-items: center;
+    margin: 90px;
+    margin-bottom: 0;
+    padding-bottom: 10%;
+    font-family: Raleway, Inter;
+    font-weight: normal;
+}
+
+.skills{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    justify-content:space-around;
     flex-wrap: wrap;
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr);  */
+}
+
+
+.card{
+    flex-basis: 10%;
+    text-align: center;
+    display: table-cell;
+}
+.card img{
+    width: 80px;
+}
+
+.card h3{
+    position: relative;
+    top: -90px;
+    left: 0;
+    color: white;
+}
+
+.card p{
+    position: relative;
+    top: -50px;
+    left: 0;
+    font-size: 70%;
+}
+
+.class-background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/backgroundimage.png");
+    background-position: bottom;
+    background-size: cover;
+    z-index: -99;
+}
+.class-background p{
+    text-align: left;
+    padding-left: 50%;
+    max-width: 90%;
+}
+
+
+.class-experience h1{
+    text-align: left;
+    font-family: Raleway, Inter;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.class-experience p{
+    text-align: left;
+}
+
+.class-experience{
+    display: flex;
+    align-items: left;
+    flex-wrap: wrap;
+}
+
+#logoCV{
+    height: auto;
+    padding-top: 15%;
+    align-items: center;
+    margin-bottom: 30%;
+    transition: all 0.3s;
+    transform: rotateY(0);
     transition: transform 0.3s ease;
 }
 
-#logo2{
-    min-width: 200px;
-    transition: all 0.3s;
-
+.text{
+    flex-basis: 50%;
+    padding-left: 20%;
+    box-sizing: border-box;
 }
 
-#logo2:hover{
+#logoCV:hover{
     justify-content: center;
     align-items: center;
-    transform: translateY(-10px);
+    transform: rotateY(160deg);
     background-color: var(rgb(45, 88, 74));
     color: var(aquamarine);
 }
+
 
 @keyframes slideInLeft  {
     form{
@@ -393,9 +457,9 @@ section h3:hover{
     to{
         transform: translateX(0);
     }
-}
+} */
 
-#clover1{
+/* #clover1{
     animation-name: slideInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-in;
@@ -403,10 +467,9 @@ section h3:hover{
     animation-iteration-count: 1;
     animation-duration: normal;
     animation-fill-mode: none;
-    /* animation: slideInLeft 1s ease-in 1s 1 normal both; */
     transform: translateX(-150px);
     animation: slideInLeft 1s ease-in both;
-}
+} */
 
 /* CONTACTS PAGE */
 
@@ -487,7 +550,6 @@ section h3:hover{
     margin-left: 20px;
     outline: none;
     font-family: Inter, Montserrat, Raleway;
-
 }
 
 #submit{
@@ -495,6 +557,8 @@ section h3:hover{
     border: none;
     background-color: none;
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
@@ -503,7 +567,6 @@ section h3:hover{
 /* MOUSE INTERACTION */
 
     .cursor{
-        z-index: 999;
         position: fixed;
         background: greenyellow;
         width: 20px;
@@ -513,8 +576,9 @@ section h3:hover{
         box-shadow: 0 0 20px greenyellow, 0 0 60px greenyellow, 0 0 100px greenyellow;
         color: aquamarine;
         animation: colors 5s infinite;
-        transform: translate(-50%, -50%);
+        /* transform: translate(-50%, -50%); */
         display: none;
+        z-index: 99;
 
     }
 
@@ -536,8 +600,9 @@ section h3:hover{
         border-radius: 50%;
         opacity: 0.2;
         transform: translate(-30%, -30%);
+        z-index: 99;
     }
-/* 
+
     .circle {
         height: 30px;
         width: 30px;
@@ -549,35 +614,8 @@ section h3:hover{
         transform: translate(-50%, -50%);
         pointer-events: none;
         transition: all 0.3 ease;
-        /* display: none; */
-    /* } */ 
-
-    /* .link-grow{
-        transform: scale(3);
-        background-color: blue;
-    }
-
-    .navbar2{
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        min-height: 10vh;
-        align-items: center;
-        margin: auto;
-    }
-
-    .nav-links, h4 {
-        display: flex;
-        flex: 0.2;
-        justify-content: space-between;
-        list-style: none;
-        position: inherit;
-    } */
-
-    /* body {
-        margin: 0;
-        overflow: hidden;
-      } */
+        z-index: 999;
+    }  
       
       .clover {
         position: absolute;
