@@ -52,69 +52,113 @@
                 <a href="">Interactive Work</a>
                 <a href="">Traditional Art</a>
             </div>
-
         </nav>
     </header>
 
-    <main>
+<main>
 
+    <div class="page" id="page1">
+        <div class="page-content">
+            <h1>Internal Page1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+            <br><br>
+            <!-- Add more content here -->
+            <img src="assets/kiki.png">
+            <br><br>
+            <img src="assets/kiki.png">
+            <button class="close-btn" onclick="closePage(1)">X</button>
+        </div>
+    </div>
+    <div class="page" id="page2">
+        <div class="page-content">
+            <h1>Internal Page2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+            <br><br>
+            <!-- Add more content here -->
+            <img src="assets/kiki.png">
+            <br><br>
+            <img src="assets/kiki.png">
+            <button class="close-btn" onclick="closePage(2)">X</button>
+        </div>
+    </div>
+    <div class="page" id="page3">
+        <div class="page-content">
+            <h1>Internal Page3</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+            <br><br>
+            <!-- Add more content here -->
+            <img src="assets/kiki.png">
+            <br><br>
+            <img src="assets/kiki.png">
+            <button class="close-btn" onclick="closePage(3)">X</button>
+        </div>
+    </div>
 
-    </main>
+    <script>
+        function openPage(pageNum) {
+            var page = document.getElementById("page" + pageNum);
+            page.style.display = "block";
+            document.body.style.overflow = "hidden"; // Disable scrolling on the background content
+        }
+        function closePage(pageNum) {
+            var page = document.getElementById("page" + pageNum);
+            page.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling on the background content
+        }
+    </script>
 
-
-    
 
     <div class="image-container">
-        <div class="image">
+        <div class="image" onclick="openPage(1)">
             <img src="assets/kiki.png" alt="Image 1">
             <div class="overlay">
                 <h2>Title 1</h2>
                 <p>Description 1</p>
             </div>
         </div>
-        <div class="image">
+        <div class="image" onclick="openPage(2)">
             <img src="assets/kiki.png" alt="Image 2">
             <div class="overlay">
                 <h2>Title 2</h2>
                 <p>Description 2</p>
             </div>
         </div>
-        <div class="image">
+        <div class="image" onclick="openPage(3)">
             <img src="assets/kiki.png" alt="Image 3">
             <div class="overlay">
                 <h2>Title 3</h2>
                 <p>Description 3</p>
             </div>
         </div>
-        <div class="image">
+        <div class="image" onclick="openPage()">
             <img src="assets/kiki.png" alt="Image 4">
             <div class="overlay">
                 <h2>Title 4</h2>
                 <p>Description 4</p>
             </div>
         </div>
-        <div class="image">
+        <div class="image" onclick="openPage()">
             <img src="assets/kiki.png" alt="Image 5">
             <div class="overlay">
                 <h2>Title 3</h2>
                 <p>Description 3</p>
             </div>
         </div>
-        <div class="image">
+        <div class="image" onclick="openPage()">
             <img src="assets/kiki.png" alt="Image 6">
             <div class="overlay">
                 <h2>Title 4</h2>
                 <p>Description 4</p>
             </div>
         </div>
-        <div class="image">
+        <div class="image" onclick="openPage()">
             <img src="assets/kiki.png" alt="Image 7">
             <div class="overlay">
                 <h2>Title 3</h2>
                 <p>Description 3</p>
             </div>
         </div>
-        <div class="image">
+        <div class="image" onclick="openPage()">
             <img src="assets/kiki.png" alt="Image 8">
             <div class="overlay">
                 <h2>Title 4</h2>
@@ -124,6 +168,8 @@
     </div>
 
 
+
+</main>
 
 </body>
 
