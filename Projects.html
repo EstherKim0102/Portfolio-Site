@@ -22,8 +22,6 @@
 <body>
 
     <div class="clover"></div>
-    <!-- <div class="cursor"></div> -->
-
 
     <div class="circle"></div>
     <div class="circle"></div>
@@ -46,53 +44,316 @@
     <header class="projects-class">
         <br><br><br><h1>3D Motion Design</h1>
         <p>3D Modeling, Texturing, Rendering</p><br><br><br>
-        <nav>
-            <div class="projects-menu">
-                <a href="">3D Design</a>
-                <a href="">Interactive Work</a>
-                <a href="">Traditional Art</a>
-            </div>
-        </nav>
+
     </header>
 
 <main>
 
-    <div class="page" id="page1">
-        <div class="page-content">
-            <h1>Internal Page1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
-            <br><br>
-            <!-- Add more content here -->
-            <img src="assets/kiki.png">
-            <br><br>
-            <img src="assets/kiki.png">
-            <button class="close-btn" onclick="closePage(1)">X</button>
+    <nav>
+        <div class="projects-menu">
+            <a href="#" onclick="showSection('section1')">3D Design</a>
+            <a href="#" onclick="showSection('section2')">Interactive Work</a>
+            <a href="#" onclick="showSection('section3')">Traditional Art</a>
         </div>
-    </div>
-    <div class="page" id="page2">
-        <div class="page-content">
-            <h1>Internal Page2</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
-            <br><br>
-            <!-- Add more content here -->
-            <img src="assets/kiki.png">
-            <br><br>
-            <img src="assets/kiki.png">
-            <button class="close-btn" onclick="closePage(2)">X</button>
+    </nav>
+
+
+    <section class="content-section active" id="section1">
+        <div class="page" id="page1">
+            <div class="page-content">
+                <h1>Internal Page1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(1)">X</button>
+            </div>
         </div>
-    </div>
-    <div class="page" id="page3">
-        <div class="page-content">
-            <h1>Internal Page3</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
-            <br><br>
-            <!-- Add more content here -->
-            <img src="assets/kiki.png">
-            <br><br>
-            <img src="assets/kiki.png">
-            <button class="close-btn" onclick="closePage(3)">X</button>
+        <div class="page" id="page2">
+            <div class="page-content">
+                <h1>Internal Page2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(2)">X</button>
+            </div>
         </div>
-    </div>
+        <div class="page" id="page3">
+            <div class="page-content">
+                <h1>Internal Page3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(3)">X</button>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image" onclick="openPage(1)">
+                <img src="assets/kiki.png" alt="Image 1">
+                <div class="overlay">
+                    <h2>Title 1</h2>
+                    <p>Description 1</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(2)">
+                <img src="assets/kiki.png" alt="Image 2">
+                <div class="overlay">
+                    <h2>Title 2</h2>
+                    <p>Description 2</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(3)">
+                <img src="assets/kiki.png" alt="Image 3">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/kiki.png" alt="Image 4">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/kiki.png" alt="Image 5">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/kiki.png" alt="Image 6">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/kiki.png" alt="Image 7">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/kiki.png" alt="Image 8">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="content-section" id="section2">
+        <div class="page" id="page7">
+            <div class="page-content">
+                <h1>Internal Page7</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(7)">X</button>
+            </div>
+        </div>
+        <div class="page" id="page8">
+            <div class="page-content">
+                <h1>Internal Page8</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(8)">X</button>
+            </div>
+        </div>
+        <div class="page" id="page9">
+            <div class="page-content">
+                <h1>Internal Page9</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(9)">X</button>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image" onclick="openPage(7)">
+                <img src="assets/logo18.png" alt="Image 1">
+                <div class="overlay">
+                    <h2>Title 1</h2>
+                    <p>Description 1</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(8)">
+                <img src="assets/logo18.png" alt="Image 2">
+                <div class="overlay">
+                    <h2>Title 2</h2>
+                    <p>Description 2</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(9)">
+                <img src="assets/logo18.png" alt="Image 3">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/logo18.png" alt="Image 4">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/logo18.png" alt="Image 5">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/logo18.png" alt="Image 6">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/logo18.png" alt="Image 7">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage()">
+                <img src="assets/logo18.png" alt="Image 8">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="content-section" id="section3">
+        <div class="page" id="page13">
+            <div class="page-content">
+                <h1>Internal Page13</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(13)">X</button>
+            </div>
+        </div>
+        <div class="page" id="page14">
+            <div class="page-content">
+                <h1>Internal Page14</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/kiki.png">
+                <button class="close-btn" onclick="closePage(14)">X</button>
+            </div>
+        </div>
+        <div class="page" id="page15">
+            <div class="page-content">
+                <h1>Internal Page15</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero sed velit malesuada, id dapibus metus finibus. Quisque vel vehicula sapien. Integer lobortis nibh quis erat venenatis, vitae malesuada sapien pulvinar.</p>
+                <br><br>
+                <!-- Add more content here -->
+                <img src="assets/kiki.png">
+                <br><br>
+                <img src="assets/logo18.png">
+                <button class="close-btn" onclick="closePage(15)">X</button>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image" onclick="openPage(13)">
+                <img src="assets/logo16.png" alt="Image 13">
+                <div class="overlay">
+                    <h2>Title 13</h2>
+                    <p>Description 1</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(14)">
+                <img src="assets/logo16.png" alt="Image 14">
+                <div class="overlay">
+                    <h2>Title 2</h2>
+                    <p>Description 2</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(15)">
+                <img src="assets/logo16.png" alt="Image 15">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(16)">
+                <img src="assets/logo16.png" alt="Image 16">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(17)">
+                <img src="assets/logo16.png" alt="Image 17">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(18)">
+                <img src="assets/logo16.png" alt="Image 18">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(19)">
+                <img src="assets/logo16.png" alt="Image 19">
+                <div class="overlay">
+                    <h2>Title 3</h2>
+                    <p>Description 3</p>
+                </div>
+            </div>
+            <div class="image" onclick="openPage(20)">
+                <img src="assets/logo16.png" alt="Image 20">
+                <div class="overlay">
+                    <h2>Title 4</h2>
+                    <p>Description 4</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script>
         function openPage(pageNum) {
@@ -105,68 +366,19 @@
             page.style.display = "none";
             document.body.style.overflow = "auto"; // Enable scrolling on the background content
         }
+
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.getElementsByClassName('content-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
     </script>
-
-
-    <div class="image-container">
-        <div class="image" onclick="openPage(1)">
-            <img src="assets/kiki.png" alt="Image 1">
-            <div class="overlay">
-                <h2>Title 1</h2>
-                <p>Description 1</p>
-            </div>
-        </div>
-        <div class="image" onclick="openPage(2)">
-            <img src="assets/kiki.png" alt="Image 2">
-            <div class="overlay">
-                <h2>Title 2</h2>
-                <p>Description 2</p>
-            </div>
-        </div>
-        <div class="image" onclick="openPage(3)">
-            <img src="assets/kiki.png" alt="Image 3">
-            <div class="overlay">
-                <h2>Title 3</h2>
-                <p>Description 3</p>
-            </div>
-        </div>
-        <div class="image" onclick="openPage()">
-            <img src="assets/kiki.png" alt="Image 4">
-            <div class="overlay">
-                <h2>Title 4</h2>
-                <p>Description 4</p>
-            </div>
-        </div>
-        <div class="image" onclick="openPage()">
-            <img src="assets/kiki.png" alt="Image 5">
-            <div class="overlay">
-                <h2>Title 3</h2>
-                <p>Description 3</p>
-            </div>
-        </div>
-        <div class="image" onclick="openPage()">
-            <img src="assets/kiki.png" alt="Image 6">
-            <div class="overlay">
-                <h2>Title 4</h2>
-                <p>Description 4</p>
-            </div>
-        </div>
-        <div class="image" onclick="openPage()">
-            <img src="assets/kiki.png" alt="Image 7">
-            <div class="overlay">
-                <h2>Title 3</h2>
-                <p>Description 3</p>
-            </div>
-        </div>
-        <div class="image" onclick="openPage()">
-            <img src="assets/kiki.png" alt="Image 8">
-            <div class="overlay">
-                <h2>Title 4</h2>
-                <p>Description 4</p>
-            </div>
-        </div>
-    </div>
-
 
 
 </main>

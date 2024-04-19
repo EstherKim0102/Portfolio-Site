@@ -227,7 +227,7 @@ article{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
+    z-index: 99;
     overflow-y: auto;
 }
 
@@ -243,8 +243,8 @@ article{
 
 .close-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 50px;
     font-size: 24px;
     background-color: transparent;
     border: none;
@@ -278,6 +278,13 @@ article{
     font-family: Montserrat, Inter;
 }
 
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
 
 
 /* ABOUT PAGE */
@@ -337,9 +344,6 @@ article{
     color: var(--clr-light);
 }
 
-/* .about-main h3{
-    text-align: left;
-} */
 
 .about-main h3:hover{
     font-style: bold;
@@ -358,19 +362,12 @@ article{
 }
 
 .class-strengths {
-    width: 100%;
-    height: 100vh;
+    width: auto;
+    height: 100%;
     background-image: url("assets/strengthimage.png");
     background-position:bottom;
     background-size: cover;
 }
-
-/* #Strengths{
-    text-align: center;
-    font-family: Raleway, Inter;
-    font-size: 40px;
-    font-weight: normal;
-} */
 
 .strength img {
     height: auto;
@@ -398,7 +395,7 @@ article{
 
 .skills{
     margin: auto;
-    width: 80%;
+    width: 70%;
     display: flex;
     align-items: center;
     margin-top: 0;
@@ -464,52 +461,60 @@ article{
     flex-wrap: wrap;
 }
 
-#logoCV{
-    height: auto;
-    padding-top: 15%;
-    align-items: center;
-    margin-bottom: 30%;
-    transition: all 0.3s;
-    transform: rotateY(0);
-    transition: transform 0.3s ease;
-}
 
-.text{
+.text {
     flex-basis: 50%;
     padding-left: 20%;
     box-sizing: border-box;
+    /* position: relative; */
 }
 
-#logoCV:hover{
+.logo-container img {
     justify-content: center;
     align-items: center;
-    transform: rotateY(160deg);
-    background-color: var(rgb(45, 88, 74));
-    color: var(aquamarine);
+    margin-left: 20%;
+    position: absolute;
+    transition: transform 0.5s; /* Smooth transition for the rotation effect */
 }
 
 
-@keyframes slideInLeft  {
+.logo-container img#logoCV2 {
+    transform: rotateY(160deg);
+    opacity: 0; /* Hide the replacement image initially */
+}
+
+.logo-container:hover img#logoCV1 {
+    transform: rotateY(-160deg); /* Rotate the original image */
+    opacity: 0; /* Hide the original image on hover */
+}
+
+.logo-container:hover img#logoCV2 {
+    transform: rotateY(0); /* Rotate the replacement image back to normal */
+    opacity: 1; /* Show the replacement image on hover */
+}
+
+
+
+/* @keyframes slideInLeft  {
     form{
         transform: translateX(-300px);
     }
-
     to{
         transform: translateX(0);
     }
-} */
+}  */
 
-/* #clover1{
-    animation-name: slideInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-delay: 1s;
-    animation-iteration-count: 1;
-    animation-duration: normal;
-    animation-fill-mode: none;
-    transform: translateX(-150px);
-    animation: slideInLeft 1s ease-in both;
-} */
+        /* #clover1{
+            animation-name: slideInLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 1s;
+            animation-iteration-count: 1;
+            animation-duration: normal;
+            animation-fill-mode: none;
+            transform: translateX(-150px);
+            animation: slideInLeft 1s ease-in both;
+        } */
 
 /* CONTACTS PAGE */
 
@@ -654,7 +659,7 @@ article{
         transform: translate(-50%, -50%);
         pointer-events: none;
         transition: all 0.3 ease;
-        z-index: 999;
+        z-index: 99;
     }  
       
       .clover {
@@ -666,6 +671,7 @@ article{
         pointer-events: none;
         opacity: 1;
         animation: clover-float 2s forwards;
+        z-index: 99;
       }
       
       @keyframes clover-float {

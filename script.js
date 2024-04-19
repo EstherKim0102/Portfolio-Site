@@ -2,8 +2,6 @@
 const coords = {x: 0, y: 0};
 const circles = document.querySelectorAll(".circle");
 const colors = ["#47ff97", "#6fff87", "#8cfe78", "#a6fd69", "#befb5c", "#d4f951", "#eaf648", "#fff242"];
-let navLinks = document.querySelectorAll('.nav-lnks li');
-
 
 document.addEventListener('mousemove', (event) => {
     const mouseX = event.pageX; // Get the mouse X-coordinate
@@ -35,30 +33,9 @@ document.addEventListener('click', function(event) {
     }
 });
 
+    
 
-      
-//    const cursor = document.querySelector(".cursor");
-
-//     //follow cursor on mouse move
-//     document.addEventListener("mousemove", (e) => {
-//         let x = e.pageX;
-//         let y = e.pageY;
-
-//         cursor.style.top = y + "px";
-//         cursor.style.left = x + "px";
-//         cursor.style.display = "block";
-
-//         //cursor effects on mouse stopped
-//         function mouseStopped(){
-//             cursor.style.display = "none";
-//         }
-//         timeout = setTimeout(mouseStopped, 1000);
-//     });
-
-//     //cursor effects on mouseout
-//     document.addEventListener("mouseout", () => {
-//         cursor.style.display = "none";
-//     });
+animateCircles();
 
 
 circles.forEach(function(circle, index){
@@ -76,21 +53,20 @@ window.addEventListener("mousemove", function(ev){
     circle.style.left = x + "px";
     circle.style.display = "block";
 
-    //cursor effects on mouse stopped
-    function mouseStopped(){
-        circle.style.display = "none";
-    }
-    // cleaerTimeout(timeout);
-    timeout = setTimeout(mouseStopped, 1000);
-    //cursor effects on mouseout
-    document.addEventListener("mouseout", () => {
-        circle.style.display = "none";
-    });
+    // //cursor effects on mouse stopped
+    // function mouseStopped(){
+    //     circle.style.display = "none";
+    // }
+    // // cleaerTimeout(timeout);
+    // timeout = setTimeout(mouseStopped, 1000);
+    // //cursor effects on mouseout
+    // document.addEventListener("mouseout", () => {
+    //     circle.style.display = "none";
+    // });
 
 });
 
 
-animateCircles();
 
 
 function animateCircles() {
@@ -112,18 +88,7 @@ function animateCircles() {
        
     });
 
-    navLinks.forEach(link => {
-        link.addEventListener("mouseleave", () =>{
-            circles.classList.remove('link-grow');
-            circle.classList.remove('link-grow');
-        });
-        link.addEventListener("mouseover", () =>{
-            circles.classList.add('link-grow');
-            circle.classList.add('link-grow');
-        });
-    });
 
-    
 
     requestAnimationFrame(animateCircles);
 }
